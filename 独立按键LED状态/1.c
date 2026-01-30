@@ -1,5 +1,4 @@
 #include <REGX52.H>
-// ±º‰º‰œ∂
 void Delay(unsigned int xms)
 {
 	unsigned char i,j;
@@ -28,4 +27,5 @@ void Delay(unsigned int xms)
 			P2_0=!P2_0;
 		}
 	}
+
 }
