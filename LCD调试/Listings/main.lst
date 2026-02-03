@@ -1,0 +1,42 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/03/2026 11:05:52 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\k5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.lst)
+                    - TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "LCD1602.H"
+   3          #include "DELAY.H"
+   4          int num;
+   5          void main()
+   6          {
+   7   1        num=1;
+   8   1        LCD_Init();
+   9   1        
+  10   1        LCD_ShowString(2,1,"hell,word");
+  11   1        
+  12   1        while(1)
+  13   1        {
+  14   2          num++;
+  15   2          Delay(1000);
+  16   2          LCD_ShowNum(1,1,num,3);
+  17   2        }
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     53    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
