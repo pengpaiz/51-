@@ -1,0 +1,6 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj",
+".\Objects\LCD1602.obj",
+".\Objects\key_jvzheng.obj" 
+TO ".\Objects\1" 
+PRINT(".\Listings\1.m51") RAMSIZE(256) 
