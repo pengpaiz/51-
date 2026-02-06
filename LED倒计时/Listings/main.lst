@@ -1,0 +1,77 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/03/2026 13:38:59 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\k5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.lst)
+                    - TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "LCD1602.h"
+   3          #include "Delay.h"
+   4          
+   5          unsigned char hour = 0;
+   6          unsigned char minute = 0;
+   7          unsigned char second = 0;
+   8          unsigned int count = 0;
+   9          
+  10          void main()
+  11          {
+  12   1          LCD_Init();
+  13   1          
+  14   1         
+  15   1          LCD_ShowString(1,1,"hello,PNGPA1");
+  16   1          
+  17   1          while(1)
+  18   1          {
+  19   2              Delay(1);
+  20   2              count++;
+  21   2              
+  22   2              if(count >= 1000)
+  23   2              {
+  24   3                  count = 0;
+  25   3                  second++;
+  26   3                  
+  27   3                  if(second >= 60)
+  28   3                  {
+  29   4                      second = 0;
+  30   4                      minute++;
+  31   4                      
+  32   4                      if(minute >= 60)
+  33   4                      {
+  34   5                          minute = 0;
+  35   5                          hour++;
+  36   5                          
+  37   5                          if(hour >= 24)
+  38   5                          {
+  39   6                              hour = 0;
+  40   6                          }
+  41   5                      }
+  42   4                  }
+  43   3                  LCD_ShowString(2,1,"Clock:");
+  44   3                  LCD_ShowNum(2,7,hour,2);
+  45   3                  LCD_ShowChar(2,9,':');
+  46   3                  LCD_ShowNum(2,10,minute,2);
+  47   3                  LCD_ShowChar(2,12,':');
+  48   3                  LCD_ShowNum(2,13,second,2);
+  49   3          }
+  50   2        }
+  51   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.60.7.0   MAIN                                                              02/03/2026 13:38:59 PAGE 2   
+
+   CODE SIZE        =    157    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
