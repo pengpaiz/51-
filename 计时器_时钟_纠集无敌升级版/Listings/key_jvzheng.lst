@@ -1,0 +1,92 @@
+C51 COMPILER V9.60.7.0   KEY_JVZHENG                                                       02/09/2026 19:16:52 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE KEY_JVZHENG
+OBJECT MODULE PLACED IN .\Objects\key_jvzheng.obj
+COMPILER INVOKED BY: D:\k5\C51\BIN\C51.EXE key_jvzheng.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ke
+                    -y_jvzheng.lst) TABS(2) OBJECT(.\Objects\key_jvzheng.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "DELAY.H"
+   3          unsigned char key()
+   4          {
+   5   1        unsigned char keynum=0;
+   6   1        
+   7   1        //“¿¥Œ…®√Ë1£¨2£¨3¡–
+   8   1        P1=0xFF;
+   9   1        P1_3=0;                 
+  10   1          if(P1_7==0)
+  11   1          {Delay(20);while(P1_7==0);
+  12   2            Delay(20);keynum=1;}
+  13   1          if(P1_6==0)
+  14   1          {Delay(20);while(P1_6==0);
+  15   2            Delay(20);keynum=5;}
+  16   1          if(P1_5==0)
+  17   1          {Delay(20);while(P1_5==0);
+  18   2            Delay(20);keynum=9;}
+  19   1          if(P1_4==0)
+  20   1          {Delay(20);while(P1_4==0);
+  21   2            Delay(20);keynum=13;}
+  22   1        P1=0xFF;
+  23   1        P1_2=0;                 
+  24   1          if(P1_7==0)
+  25   1          {Delay(20);while(P1_7==0);
+  26   2            Delay(20);keynum=2;}
+  27   1          if(P1_6==0)
+  28   1          {Delay(20);while(P1_6==0);
+  29   2            Delay(20);keynum=6;}
+  30   1          if(P1_5==0)
+  31   1          {Delay(20);while(P1_5==0);
+  32   2            Delay(20);keynum=10;}
+  33   1          if(P1_4==0)
+  34   1          {Delay(20);while(P1_4==0);
+  35   2            Delay(20);keynum=14;}
+  36   1        P1=0xFF;
+  37   1        P1_1=0;                 
+  38   1          if(P1_7==0)
+  39   1          {Delay(20);while(P1_7==0);
+  40   2            Delay(20);keynum=3;}
+  41   1          if(P1_6==0)
+  42   1          {Delay(20);while(P1_6==0);
+  43   2            Delay(20);keynum=7;}
+  44   1          if(P1_5==0)
+  45   1          {Delay(20);while(P1_5==0);
+  46   2            Delay(20);keynum=11;}
+  47   1          if(P1_4==0)
+  48   1          {Delay(20);while(P1_4==0);
+  49   2            Delay(20);keynum=15;}
+  50   1        P1=0xFF;
+  51   1        P1_0=0;                 
+  52   1          if(P1_7==0)
+  53   1          {Delay(20);while(P1_7==0);
+  54   2            Delay(20);keynum=4;}
+C51 COMPILER V9.60.7.0   KEY_JVZHENG                                                       02/09/2026 19:16:52 PAGE 2   
+
+  55   1          if(P1_6==0)
+  56   1          {Delay(20);while(P1_6==0);
+  57   2            Delay(20);keynum=8;}
+  58   1          if(P1_5==0)
+  59   1          {Delay(20);while(P1_5==0);
+  60   2            Delay(20);keynum=12;}
+  61   1          if(P1_4==0)
+  62   1          {Delay(20);while(P1_4==0);
+  63   2            Delay(20);keynum=16;}
+  64   1        
+  65   1        return keynum;
+  66   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    393    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
